@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1087081553297",
+    "project_id": "healhify-8755a",
+    "storage_bucket": "healhify-8755a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087081553297:android:f8b2564f58787bdb000e30",
+        "android_client_info": {
+          "package_name": "com.example.healhify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBURSjNO3kh3nn8UokpbWzC_YQxwtJvYmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
