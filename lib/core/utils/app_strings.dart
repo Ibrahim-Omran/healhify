@@ -13,6 +13,19 @@ class AppStrings {
   static const String rightApp = 'The right app to check your\n health';
   static const String forgetPassword = 'Forgot\nPassword ?';
   static const String register = 'Register';
+  static const String service = 'Services';
+  static const String covid = 'Covid';
+  static const String bones = 'Bones';
+  static const String bonesSubTitle = 'Upload picture of your bones\n X-Ray To be Checked';
+  static const String covidSubTitle = 'Upload picture of your covid\n X-Ray To be Checked';
+  static const String skinSubTitle = 'Upload picture of your skin\n X-Ray To be Checked';
+  static const String lungsSubTitle = 'Upload picture of your lungs\n X-Ray To be Checked';
+  static const String titleImage = 'please upload your X-rar\n picture to be\n checked';
+  static const String skin = 'Skin';
+  static const String lungs = 'Lungs';
+  static const String upload = 'Upload';
+  static const String scan = 'Scan';
+  static const String checkYourBody = 'Check your body\n and health for better life';
 
 
   // sign Up

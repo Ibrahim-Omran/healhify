@@ -8,6 +8,10 @@ class AppAssets{
   static const String logo = '${baseUrl}logo.png';
   static const String appLogo = '${baseUrl}app_logo.png';
   static const String continueLogo = '${baseUrl}continue_logo.png';
+  static const String covid = '${baseUrl}coved.png';
+  static const String bones = '${baseUrl}bones.png';
+  static const String lungs = '${baseUrl}lungs.png';
+  static const String skin = '${baseUrl}skin.png';
 
 
 

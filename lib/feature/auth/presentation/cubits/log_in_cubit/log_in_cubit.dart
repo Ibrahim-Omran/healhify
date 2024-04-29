@@ -28,8 +28,8 @@ class LoginCubit extends Cubit<LoginState> {
     FireAuthController controller = FireAuthController();
     try {
       await controller.login(
-          email: emailController.text.trim(),
-          password: passwordController.text.trim());
+          email: emailController.text,
+          password: passwordController.text);
 
       emit(LoginSuccessState());
       await sl<CacheHelper>().saveData(key: 'loginKey', value: true);

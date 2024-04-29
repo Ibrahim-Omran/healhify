@@ -17,7 +17,9 @@ class ShowDialogWidget extends StatelessWidget {
       content: SizedBox(
         height: 60.h,
         child: Center(
-          child: Text(title,
+          child: Text(
+              title,
+              textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
                   .displayLarge!

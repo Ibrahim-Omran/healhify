@@ -13,7 +13,7 @@ import '../../../../core/widget/back_widget.dart';
 import '../../../../core/widget/background_widget.dart';
 import '../../../../core/widget/custom_buttom.dart';
 import '../../../../core/widget/show_dialog_widget.dart';
-import '../component/container_component.dart';
+import '../../../../core/widget/container_component.dart';
 import '../component/text_form_field_component.dart';
 
 class RegisterScreen extends StatelessWidget {

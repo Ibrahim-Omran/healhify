@@ -4,6 +4,7 @@ import 'package:healhify/feature/auth/presentation/cubits/sign_up_cubit/sign_up_
 import 'package:healhify/feature/home/presentation/cubit/home_cubit/home_cubit.dart';
 
 import '../../feature/auth/presentation/cubits/forget_password_cubit/forget_cubit.dart';
+import '../../feature/home/presentation/cubit/chest_cubit/chest_cubit.dart';
 import '../cache/cache_helper.dart';
 
 
@@ -19,6 +20,7 @@ Future<void>  initServiceLocator() async {
    sl.registerLazySingleton(()=>LoginCubit());
    sl.registerLazySingleton(()=>SignUpCubit());
    sl.registerLazySingleton(()=>ForgetCubit());
+   sl.registerLazySingleton(()=>ScanXrayChestCubit());
 
 
 
