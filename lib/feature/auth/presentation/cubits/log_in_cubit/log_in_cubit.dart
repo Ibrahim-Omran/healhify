@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:healhify/feature/auth/presentation/cubits/log_in_cubit/log_in_state.dart';
 import '../../../../../core/cache/cache_helper.dart';
 import '../../../../../core/firebase/firebase_auth.dart';
 import '../../../../../core/service/service_locator.dart';
-import 'log_in_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit() : super(LoginInitial());
@@ -25,13 +25,13 @@ class LoginCubit extends Cubit<LoginState> {
 
   Future<void> login() async {
     emit(LoginLoadingState());
-    FireAuthController controller = FireAuthController();
+    debugPrint('Login loading.....!');
     try {
-      await controller.login(
-          email: emailController.text,
-          password: passwordController.text);
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text, password: passwordController.text);
 
       emit(LoginSuccessState());
+      debugPrint('Login Success.....!');
       await sl<CacheHelper>().saveData(key: 'loginKey', value: true);
 
       emailController.clear();
@@ -39,16 +39,19 @@ class LoginCubit extends Cubit<LoginState> {
     } on FirebaseAuthException catch (ex) {
       switch (ex.code) {
         case "user-not-found":
+          debugPrint('Login Error.....!');
           emit(LoginErrorState(errorMs: 'user not found'));
           break;
         case "wrong-password":
           emit(LoginErrorState(errorMs: 'wrong password'));
           break;
         case "INVALID_LOGIN_CREDENTIALS":
+          debugPrint('Login INVALID_LOGIN_CREDENTIALS.....!');
           emit(LoginErrorState(errorMs: 'User not found or Wrong password !'));
           break;
       }
     } catch (e) {
+      debugPrint('Login Error 2.....!');
       emit(LoginErrorState(errorMs: 'something went wrong'));
     }
   }

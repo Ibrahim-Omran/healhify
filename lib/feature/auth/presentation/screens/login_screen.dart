@@ -38,17 +38,17 @@ class LoginScreen extends StatelessWidget {
                     );
                   },
                 );
-              } else if(state is LoginSuccessState) {
+              } else if (state is LoginSuccessState) {
                 //showSnackBar(context, 'Login Success', Colors.green);
                 navigateReplacement(context: context, route: Routes.home);
               }
             }, builder: (context, state) {
               final cubit = BlocProvider.of<LoginCubit>(context);
-              return state is LoginLoadingState
-                  ? const Center(child: CircularProgressIndicator())
-                  : SingleChildScrollView(
-                      child: Form(
-                        key: cubit.loginKey,
+              return Form(
+                key: cubit.loginKey,
+                child: state is LoginLoadingState
+                    ? const Center(child: CircularProgressIndicator())
+                    : SingleChildScrollView(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -150,7 +150,7 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                    );
+              );
             }),
           ),
         ),

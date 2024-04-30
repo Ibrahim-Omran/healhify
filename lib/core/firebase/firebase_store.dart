@@ -22,13 +22,13 @@ class FireStoreController {
         );
   }
 
-  Future<UserModel?> getCurrentPatient() async {
+  Future<UserModel?> getCurrentUser() async {
     UserModel? currentUser;
 
     try {
       QuerySnapshot querySnapshot = await FirebaseFirestore.instance
           .collection('users')
-          .where('isUser',
+          .where('idUser',
               isEqualTo: FirebaseAuth.instance.currentUser!.uid)
           .get();
 
@@ -37,10 +37,10 @@ class FireStoreController {
             querySnapshot.docs.first.data() as Map<String, dynamic>;
         currentUser = UserModel.fromMap(data);
       } else {
-        debugPrint('Patient not found');
+        debugPrint('user not found');
       }
     } catch (e) {
-      debugPrint('Error getting current Patient: $e');
+      debugPrint('Error getting current user: $e');
     }
 
     return currentUser;

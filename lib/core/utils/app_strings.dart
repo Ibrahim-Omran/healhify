@@ -25,6 +25,10 @@ class AppStrings {
   static const String lungs = 'Lungs';
   static const String upload = 'Upload';
   static const String scan = 'Scan';
+  static const String profile = 'Profile';
+  static const String contactUs = 'Contact us';
+  static const String sendEmail = 'Feel free to send us a\n message any time';
+  static const String changeInformation = 'change your information';
   static const String checkYourBody = 'Check your body\n and health for better life';
 
 

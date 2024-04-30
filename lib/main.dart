@@ -6,6 +6,8 @@ import 'package:healhify/feature/auth/presentation/cubits/forget_password_cubit/
 import 'package:healhify/feature/auth/presentation/cubits/log_in_cubit/log_in_cubit.dart';
 import 'package:healhify/feature/auth/presentation/cubits/sign_up_cubit/sign_up_cubit.dart';
 import 'package:healhify/feature/home/presentation/cubit/chest_cubit/chest_cubit.dart';
+import 'package:healhify/feature/mail/presentation/cubit/mail_cubit/mail_cubit.dart';
+import 'package:healhify/feature/profile/presentation/cubit/profile_cubit/profile_cubit.dart';
 import 'app/app.dart';
 import 'core/bloc/bloc_observer.dart';
 import 'core/cache/cache_helper.dart';
@@ -39,6 +41,12 @@ void main() async {
         ),
         BlocProvider(
           create: (context) => sl<ScanXrayChestCubit>(),
+        ),
+        BlocProvider(
+          create: (context) => sl<ProfileCubit>()..getCurrentUser(),
+        ),
+        BlocProvider(
+          create: (context) => sl<MailCubit>(),
         ),
       ],
       child: const MyApp(),

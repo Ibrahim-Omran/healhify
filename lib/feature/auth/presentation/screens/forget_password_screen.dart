@@ -51,11 +51,11 @@ class ForgetPasswordScreen extends StatelessWidget {
                     }
                   }, builder: (context, state) {
                     final cubit = BlocProvider.of<ForgetCubit>(context);
-                    return state is ForgetLoadingState
-                        ? const Center(child: CircularProgressIndicator())
-                        : Form(
-                            key: cubit.forgetKey,
-                            child: ContainerComponent(
+                    return Form(
+                      key: cubit.forgetKey,
+                      child: state is ForgetLoadingState
+                          ? const Center(child: CircularProgressIndicator())
+                          : ContainerComponent(
                               height: 240.h,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -97,7 +97,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                          );
+                    );
                   }),
                 ],
               ),

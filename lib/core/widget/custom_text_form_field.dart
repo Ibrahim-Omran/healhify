@@ -5,7 +5,7 @@ import '../utils/app_colors.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-     this.controller,
+    this.controller,
     this.hintText,
     this.labelText,
     this.validator,
@@ -20,7 +20,11 @@ class CustomTextFormField extends StatelessWidget {
     this.border,
     this.filled,
     this.fillColor,
-    this.onChanged, this.colorCrsor,
+    this.onChanged,
+    this.colorCrsor,
+    this.maxLines,
+    this.expands = false,
+    this.contentPadding, this.errorBorder,
   });
 
   final TextEditingController? controller;
@@ -33,19 +37,25 @@ class CustomTextFormField extends StatelessWidget {
   final TextInputType? keyboardType;
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
+  final InputBorder? errorBorder;
   final TextStyle? hintStyle;
   final InputBorder? border;
   final bool? filled;
   final Color? fillColor;
   final Color? colorCrsor;
+  final int? maxLines;
+  final bool expands;
+  final EdgeInsetsGeometry? contentPadding;
   final void Function(String)? onChanged;
 
   final bool readOnly;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
       cursorColor: AppColors.black,
+
       validator: validator,
       obscureText: obscureText,
       keyboardType: keyboardType,
@@ -57,22 +67,28 @@ class CustomTextFormField extends StatelessWidget {
 
       onChanged: onChanged,
 
+      maxLines: maxLines,
+      expands: expands,
       decoration: InputDecoration(
+        contentPadding: contentPadding,
+
         hintText: hintText,
         labelText: labelText,
         hintStyle: hintStyle,
         border: border,
         filled: filled,
         fillColor: fillColor,
+
         enabledBorder: enabledBorder,
         focusedBorder: focusedBorder,
+        errorBorder: errorBorder,
 
 
         suffixIcon: IconButton(
           onPressed: suffixIconOnPressed,
           icon: Icon(
             iconSuffix,
-            color:  AppColors.black,
+            color: AppColors.black,
           ),
         ),
       ),

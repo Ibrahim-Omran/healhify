@@ -14,12 +14,12 @@ class ForgetCubit extends Cubit<ForgetState> {
     emit(ForgetLoadingState());
     try {
       await FirebaseAuth.instance
-          .sendPasswordResetEmail(email: emailController.text.trim());
+          .sendPasswordResetEmail(email: emailController.text);
       debugPrint('Password reset email sent successfully');
       emit(ForgetSuccessState());
     } catch (error) {
       debugPrint('Error sending password reset email: $error');
-      emit(ForgetErrorState(errorMs: error.toString()));
+      emit(ForgetErrorState(errorMs: 'something went wrong'));
     }
   }
 }
