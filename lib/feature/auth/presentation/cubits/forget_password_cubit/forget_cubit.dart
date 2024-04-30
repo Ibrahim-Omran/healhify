@@ -17,6 +17,7 @@ class ForgetCubit extends Cubit<ForgetState> {
           .sendPasswordResetEmail(email: emailController.text);
       debugPrint('Password reset email sent successfully');
       emit(ForgetSuccessState());
+      emailController.clear();
     } catch (error) {
       debugPrint('Error sending password reset email: $error');
       emit(ForgetErrorState(errorMs: 'something went wrong'));

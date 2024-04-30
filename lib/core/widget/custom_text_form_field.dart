@@ -22,7 +22,7 @@ class CustomTextFormField extends StatelessWidget {
     this.fillColor,
     this.onChanged,
     this.colorCrsor,
-    this.maxLines,
+    this.maxLines = 1,
     this.expands = false,
     this.contentPadding, this.errorBorder,
   });

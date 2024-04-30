@@ -21,11 +21,14 @@ class UserDataComponent extends StatelessWidget {
       ),
       child: Center(
         child: FittedBox(
-          child: Text(
-            text,
-            style: Theme.of(context).textTheme
-                .displayMedium!
-                .copyWith(color: Colors.white,fontSize: 16,),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme
+                  .displayMedium!
+                  .copyWith(color: Colors.white,fontSize: 16,),
+            ),
           ),
         ),
       ),

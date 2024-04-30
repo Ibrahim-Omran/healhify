@@ -22,10 +22,12 @@ class MailCubit extends Cubit<MailState> {
       scheme: 'mailto',
       path: 'yossef.abdelgaied@gmail.com',
       query: encodeQueryParameters(<String, String>{
-        'subject': subjectController.text,
-        'body':messageController.text,
+        'subject': subjectController.text.toString(),
+        'body': messageController.text.toString(),
       }),
     );
     launchUrl(emailLaunchUri);
+    messageController.clear();
+    subjectController.clear();
   }
 }
