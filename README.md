@@ -1,4 +1,4 @@
-# Skin Care
+# Healthify
 
 <div align="start">
 <!--      <a href="https://api.visitorbadge.io/api/visitors?path=Up-To-Do-App&label=People%20who%20visited%20this%20page&countColor=%23263759" target="_blank">
@@ -24,7 +24,7 @@
 
 ## 🚀 Getting Started
 
-- Skin Care App It is an application designed to detect skin diseases using artificial intelligence.
+- Application to detect bone fractures, Covid-19, skin diseases and pneumonia.
 
 ## 🤳 Screens
 
@@ -33,12 +33,13 @@
 - **Login Screen:** We log in through it.
 - **Sign-Up Screen:** Through which we create an account.
 - **Forget password Screen:** Through it we make a change for me the password.
-- **Home Screen:** Through which we display the sections of the application `payment`, `scan`,`requist`, `history`.
-- **Scan Screen:** Through which we do a test for the picture and determine the type of disease.
-- **Payment Screen:** Through it, we make an electronic payment .
-- **Share Opinion Screen:** Through which we share my experience about the application.
-- **History Screen:** We see previous scans.
-- **Requist Screen:** Through which we view the inspection requests submitted by users.
+- **Home Screen:** Through which we display the sections of the application `Bones`, `Covid`,`Skin`, `Lungs`.
+- **Bones-Scan Screen:** Detect bone fractures.
+- **Covid-Scan Screen:** Detect COVID-19.
+- **Skin-Scan Screen:** Detect skin diseases.
+- **Lungs-Scan Screen:** Detect pneumonia.
+- **Contact-Us Screen:** Contact app-specific support.
+
 
 <hr>
 <!-- <h3>
@@ -56,35 +57,38 @@
 
 ## 📁 File Structure
 
-![Screenshot (171)](https://github.com/Ibrahim-Omran/skin/assets/112516011/9a23123b-e93d-49ba-8972-700514ff40b6)
+![Screenshot (173)](https://github.com/Ibrahim-Omran/healthify/assets/112516011/37081dbb-0d18-4472-9e80-55d268b24583)
+
 
 
 ## 📱 UI
+
+![photo_2024-06-20_17-57-20](https://github.com/Ibrahim-Omran/healthify/assets/112516011/bd193d24-5482-4218-9360-f25de2ff1db6)
+![photo_2024-06-20_17-57-25](https://github.com/Ibrahim-Omran/healthify/assets/112516011/2bac6736-00f6-4f9f-bd03-cb93c0322479)
 
 
 
 ## 🎥 Video
 
 
-
-
+https://github.com/Ibrahim-Omran/healthify/assets/112516011/80c3387f-e9e9-4bcb-8263-5c2943f28e27
 
 
 ## 🛠 Dependencies
 
 ```pubspec.yaml
+  shared_preferences: ^2.2.1
+  flutter_screenutil: ^5.9.0
+  flutter_bloc: ^8.1.3
   firebase_core: ^2.25.4
   firebase_auth: ^4.17.4
   cloud_firestore: ^4.15.5
   firebase_storage: ^11.6.6
-  get_it: ^7.6.4
-  flutter_bloc: ^8.1.3
-  shared_preferences: ^2.2.1
-  flutter_screenutil: ^5.9.0
-  intl_phone_field: ^3.1.0
   tflite: ^1.1.2
   image_picker: ^0.8.4+2
-  url_launcher: ^6.2.2
+  get_it: ^7.6.4
+  curved_labeled_navigation_bar: ^2.0.2
+  url_launcher: ^6.2.6
 ```
 
 ## ☢️ Usage
